@@ -1,12 +1,15 @@
 import kaplay from "kaplay";
-
+const speed = 50;
 const k = kaplay({
     canvas: document.getElementById("canvas"),
     width: 144,
     height: 256,
     letterbox: true,
-    scale: 16,
+    scale: 8,
 });
+k.loadRoot("./"); 
+k.setGravity(100)
+k.debug.inspect = true
 
 k.loadSpriteAtlas("sprites/flappybird.png",{
     "bg_day":{
@@ -43,7 +46,7 @@ k.loadSpriteAtlas("sprites/flappybird.png",{
         x:0,
         y:483,
         width:84,
-        height: 28,
+        height: 23,
         sliceX: 3,
         anims:{
             "fly":{
@@ -77,23 +80,41 @@ const bg2 = k.add([
 ])
 const ground1 = k.add([
     sprite("ground"),
-    pos(0,200)
+    pos(0,200),
+    body({isStatic:true}),
+    area()
 ])
 const ground2 = k.add([
     sprite("ground"),
-    pos(144,200)
+    pos(144,200),
+    body({isStatic:true}),
+    area()
 ])
+const bird = k.add([
+    sprite("bird_yellow"),
+    pos(width()/4,(height()-56)/2),
+    body(),
+    area({
+        shape: new k.Rect(k.vec2(4,8),14,12)
+    })
+])
+bird.play("fly")
+onClick(()=>{
+    bird.jump(50)
+})
+onKeyPress("space",()=>{
+    bird.jump(50)
+})
 onUpdate(
     ()=>{
-        bg1.move(-20,0)
-        bg2.move(-20,0)
+        bg1.move(-speed/4,0)
+        bg2.move(-speed/4,0)
         if(bg1.pos.x <= -width()) bg1.pos.x = bg2.pos.x + width();
         if(bg2.pos.x <= -width()) bg2.pos.x = bg1.pos.x + width();
-        ground1.move(-50,0)
-        ground2.move(-50,0)
+        ground1.move(-speed,0)
+        ground2.move(-speed,0)
         if(ground1.pos.x <= -width()) ground1.pos.x = ground2.pos.x + width();
         if(ground2.pos.x <= -width()) ground2.pos.x = ground1.pos.x + width();
     }
 )
-k.loadRoot("./"); 
 
