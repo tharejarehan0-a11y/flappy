@@ -14,7 +14,7 @@ The biggest difficulty was that it had very less resources available to learn fr
 
 # Spritesheet
 
-![image of the spritesheet](myGame/public/sprites/flappybird.png)
+![image of the spritesheet](myGame/public/sprites/flappybird.png) <br>
 **Huge Credits to [superjustinbros](https://www.spriters-resource.com/profile/superjustinbros/)**
 The spritesheet was take from [sprites-resource.com](https://www.spriters-resource.com/mobile/flappybird/asset/59894/?__cf_chl_tk=CHTAyZ44ge_mLBa_Wye4xDSzI614UDPwdWYdr9DqC3Q-1795506578-1.0.1.1-8iCttseNBVpa8a08Yhuzqc3Q.5qIXmgXlpKohWM.pMg) and it is one of the best flappy bird spritesheet available out there do check out the work of this guy i liked the assests so much because these are placed really well which makes making a judgement about the positioning and size of the assets really easy which is very important for kaplay because whenever u do that in javascript u need to specify everything as shown below <br>
 
