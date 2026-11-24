@@ -97,6 +97,7 @@ const ground1 = k.add([
     sprite("ground"),
     pos(0,200),
     body({isStatic:true}),
+    z(2),
     area(),
     "kill"
 ])
@@ -104,6 +105,7 @@ const ground2 = k.add([
     sprite("ground"),
     pos(144,200),
     body({isStatic:true}),
+    z(2),
     area(),
     "kill"
 ])
