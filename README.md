@@ -263,6 +263,26 @@ speed += speedIncrement;
 
 <hr>
 
+# Some Details 
+
+## dist folder 
+
+The dist folder contains all the build files which are required for uploading to itch.io and these are the commands u need to make a build folder
+
+```terminal
+npm install
+npm run build 
+```
+this only works if u have cloned the repo u can also run this on localhost if u cloned the git repo thru
+
+```terminal
+npm run dev
+```
+
+## The Zip file
+
+There is also a zip file called myGame.zip in the myGame folder this is the zip file fo build files it has been uploaded to itch.io
+
 # Do explore Kaplay.js 
 
 
