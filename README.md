@@ -12,4 +12,4 @@ The biggest difficulty was that it had very less resources available to learn fr
 
 # Spritesheet
 
-![image of the spritesheet]("myGame/public/sprites/flappybird.png")
+![image of the spritesheet](myGame/public/sprites/flappybird.png)
